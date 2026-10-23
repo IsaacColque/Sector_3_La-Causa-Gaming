@@ -1,0 +1,183 @@
+/* Cuerpo General  */
+* { margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;}
+
+body, html {  min-height: 100vh;
+    background-color: #000; 
+    color: #fff;
+}
+
+/* Video de fondo */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 1;
+    filter: brightness(0.4);
+    object-fit: cover;
+}
+
+/* Contenedor principal */
+.hacker-interface {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 10px; 
+}
+
+/* Estructura del boceto (caja de la terminal)  */
+.terminal-box {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 3px solid #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Secciones dentro de la caja  */
+.terminal-section {
+    border-bottom: 2px solid #00ff00;
+    padding: 10px 15px; 
+}
+
+.terminal-section:last-child {
+    border-bottom: none;
+}
+
+/* Estilos de los textos   */
+h1, h2, h3, p, label {
+    color: #00ff00;
+    text-transform: uppercase;
+    margin-bottom: 6px; 
+}
+
+p, label {
+    font-size: 0.85rem; 
+    line-height: 1.3;
+    color: #a0ffa0;
+}
+
+/* Cabecera y TIMING  */
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-section h1 {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+#timer {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff0000;
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.7);
+}
+
+/* Bloque de codigo */
+.code-block {
+    background-color: rgba(0, 30, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #006600;
+    overflow-x: auto;
+}
+
+.code-block code {
+    color: #d0ffd0;
+    display: block;
+    white-space: pre;
+    font-size: 0.85rem;
+}
+
+/* Resaltar ERROR en el codigo */
+.error-highlight {
+    color: #ff4444;
+    font-weight: bold;
+    background-color: rgba(255, 0, 0, 0.2);
+    padding: 0 3px;
+}
+
+/* Sección de opciones */
+.options-section h3 {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    margin-top: 8px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 50, 0, 0.3);
+    border: 1px solid #00cc00;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.option-item:hover {
+    background-color: rgba(0, 255, 0, 0.2);
+}
+
+/* Ocultar radio button nativo */
+.option-item input[type="radio"] {
+    display: none;
+}
+
+.option-text {
+    color: #00ff00;
+    flex-grow: 1;
+}
+
+/* Estado de selección */
+.option-item input[type="radio"]:checked + .option-text {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 0 0 5px #00ff00;
+}
+
+.option-item:has(input[type="radio"]:checked) {
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* Boton enviar */
+.submit-section {
+    padding: 0;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: none;
+    border: none;
+    color: #00ff00;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #00ff00;
+    color: #000;
+}

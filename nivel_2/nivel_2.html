@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKING GAME</title>
+    <link rel="stylesheet" href="nivel_2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="img/Hacker3.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Interfaz principal -->
+    <div class="hacker-interface">
+        <form class="terminal-box" action="#" method="post">
+            
+            <!-- Cabecera y tiempo -->
+            <div class="terminal-section header-section">
+                <h1>ALERTA EN EL BOLETÍN!! EL SISTEMA ESTA REPROBANDO A TODOS POR ERROR</h1>
+                <div id="timer">3:00</div>
+            </div>
+
+            <!-- Misión -->
+            <div class="terminal-section">
+                <h2>DESAFIO 2: EL REPROBADOR AUTOMATICO</h2>
+                <p>El Hacker invertio la logica de las notas. aunque el alumno saque un 8 REPROBARA.<br>
+                ¿QUE HACEMOS PARA QUE LOS ALUMNO QUE SAQUEN 6 O MAS APRUEBEN?</p>
+            </div>
+
+            <!-- Codigo con fallas -->
+            <div class="terminal-section">
+                <h2>CÓDIGO ACTUAL</h2>
+                <div class="code-block">
+                    <p>CODIGO ACTUAL: SI LA NOTA ES MENOR A 6 (<span class="error-highlight">&lt; 6</span>) ENTONCES REPRUEBA</p>
+                </div>
+            </div>
+
+            <!-- Opciones -->
+            <div class="terminal-section options-section">
+                <h3>ELIGE LA OPCIÓN CORRECTA:</h3>
+                <div class="options-container">
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="A" required>
+                        <span class="option-text">[ A ] : CAMBIAR EL OPERADOR "&lt;" POR "&gt;="</span>
+                    </label>
+
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="B">
+                        <span class="option-text">[ B ] : PONER UN 10 A TODOS</span>
+                    </label>
+
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="C">
+                        <span class="option-text">[ C ] : BORRAR LA LIBRETA ESCOLAR</span>
+                    </label>
+
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="D">
+                        <span class="option-text">[ D ] : CAMBIAR LA NOTA MAXIMA A CERO</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Boton enviar -->
+            <div class="terminal-section submit-section">
+                <button type="submit" class="submit-button">ENVIAR SOLUCION</button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Temporizador -->
+    <script src="js/Temporizador.js"></script>
+</body>
+</html>

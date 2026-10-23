@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACKING GAME</title>
+    <link rel="stylesheet" href="nivel_1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="img/Hacker3.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Interfaz principal -->
+    <div class="hacker-interface">
+        <form class="terminal-box" action="#" method="post">
+            
+            <!-- Cabecera y tiempo -->
+            <div class="terminal-section header-section">
+                <h1>ERROR EN EL SISTEMA: BUCLE INFINITO</h1>
+                <div id="timer">3:00</div>
+            </div>
+
+            <!-- Misión -->
+            <div class="terminal-section">
+                <h2>Desafío 1</h2>
+                <p>El hacker cambió un signo para restar en vez de sumar, congelando el sistema. ¡Arréglalo!</p>
+            </div>
+
+            <!-- Codigo con fallas -->
+            <div class="terminal-section">
+                <h2>CÓDIGO CON FALLA</h2>
+                <div class="code-block">
+                    <p>let totalStudents = 30;<br>
+                    for (let i = 0; i < totalStudents; <span class="error-highlight">i--</span>) <br>
+                    &nbsp;&nbsp;console.log("Student checked");<br>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Opciones -->
+            <div class="terminal-section options-section">
+                <h3>ELIGE LA OPCIÓN CORRECTA:</h3>
+                <div class="options-container">
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="A" required>
+                        <span class="option-text">[ A ] : Cambiar "i--" por "i++"</span>
+                    </label>
+
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="B">
+                        <span class="option-text">[ B ] : Borrar todo y apagar servidor</span>
+                    </label>
+
+                    <label class="option-item">
+                        <input type="radio" name="solution" value="C">
+                        <span class="option-text">[ C ] : Multiplicar estudiantes por cero</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Boton enviar -->
+            <div class="terminal-section submit-section">
+                <button type="submit" class="submit-button">ENVIAR SOLUCIÓN</button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Temporizador -->
+     <script src="js/Temporizador.js"></script>
+</body>
+</html>
